@@ -1,0 +1,2 @@
+cd workspace/MarkdownEditor
+venv/bin/python main.py

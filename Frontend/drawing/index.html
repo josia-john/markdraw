@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drawing</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+
+    <body>
+        <h1>Drawing-Test :)</h1>
+
+        <div id="img"></div>
+
+
+        <div id="settings">
+            <input id="stroke-width" type="number" min="1" max="10" value="2">
+            <input id="stroke-color" type="color">
+        </div>
+
+        <div id="tutorial">
+            <p>Press SHIFT and hover over path to remove it.</p>
+        </div>
+
+        <div id="saving">
+            <h2>Save your file</h2>
+            <button id="save">save File</button>
+            <p>last saved: <span id="lastSaved">-</span></p>
+        </div>
+
+        <div>
+            <p><a href="../navigator/index.html">explorer</a></p>
+        </div>
+
+        <script src="draw.js"></script>
+        <script src="deletePath.js"></script>
+    </body>
+</html>

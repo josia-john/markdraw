@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+function runEditor ()
+{
+    cd workspace/MarkdownEditor
+    venv/bin/python main.py
+}
+
+function runWB ()
+{
+    cd workspace/MarkdownEditor/whitebophir
+    PORT=23215 npm start
+}
+
+
+runWB 

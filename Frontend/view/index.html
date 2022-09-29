@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>This page is for viewing a page :)</h1>
+
+        <!-- <div id="editor" contenteditable="true" onkeypress="uniCharCode(event)" onkeydown="uniKeyCode(event)"> -->
+        <div id="editor" onkeydown="setTimeout(function(){ update($('#editor').html()); }, 0);"><p><br></p></div>
+
+        <!-- <div id="knownBugs">
+            <h2>Known Bugs (aka. features):</h2>
+            <ul>
+                <li>Caret doesn't work around images</li>
+            </ul>
+        </div> -->
+
+
+        <div id="edit">
+            <h2>Edit the page</h2>
+            <button id="goToEdit">Edit</button>
+        </div>
+
+        <div>
+            <h2>Back to the Explorer</h2>
+            <p><a href="../navigator/index.html">explorer</a></p>
+        </div>
+        
+
+        <script src="conversions.js"></script>
+        <script src="fileOpener.js"></script>
+        <script src="goToEdit.js"></script>
+    </body>
+</html>

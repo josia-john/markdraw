@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editor</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../styles/style.css">
+
+
+        <script>
+            MathJax = {
+              loader: {load: ['input/asciimath', 'output/chtml', 'ui/menu']},
+            };
+        </script>
+
+
+        <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+
+
+    </head>
+
+    <body>
+        <h1>Markdraw :)</h1>
+
+        <!-- <div id="editor" contenteditable="true" onkeypress="uniCharCode(event)" onkeydown="uniKeyCode(event)"> -->
+        <div id="editor" contenteditable="true" spellcheck="false" onKeyPress="setTimeout(function(){ update($('#editor').html()); }, 0);"><p><br></p></div>
+
+        <div id="md-tutorial">
+            <h2>Implemented commands:</h2>
+            <ul>
+                <li><strong>italic</strong>:              put "<strong>*</strong>" around a word / sentence to make it italic</li>
+                <li><strong>strong</strong>:              put "<strong>**</strong>" around a word / sentence to make it strong</li>
+                <li><strong>italic and strong</strong>:   put "<strong>***</strong>" around a word / sentence to make it italic and strong</li>
+                <li><strong>underline</strong>:           put "<strong>+</strong>" around a word / sentence to underline it</li>
+                <li><strong>Headers</strong>:             use 1-6 "<strong>#</strong>" at the beginning of a line to start a header</li>
+                <li><strong>links</strong>:               <strong>[text](url)</strong></li>
+                <li><strong>images</strong>:              <strong>![alt-text](url)</strong></li>
+            </ul>
+        </div>
+
+
+        <!-- <div id="knownBugs">
+            <h2>Known Bugs (aka. features):</h2>
+            <ul>
+                <li>Caret doesn't work around images</li>
+            </ul>
+        </div> -->
+
+        <div id="renderMath">
+            <h2>Render the Math</h2>
+            <button onclick="refreshMath();">refresh</button>
+        </div>
+
+        <div id="view">
+            <h2>View the page</h2>
+            <button id="goToView">View</button>
+        </div>
+
+        <div id="saving">
+            <h2>Save your file</h2>
+            <button id="save">save File</button>
+            <p>last saved: <span id="lastSaved">-</span></p>
+        </div>
+
+        <div id="drawing">
+            <h2>Add a drawing</h2>
+            <button id="addDrawing">new sketch</button>
+        </div>
+
+        <div>
+            <h2>Back to the Explorer</h2>
+            <p><a href="../navigator/index.html">explorer</a></p>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="conversions.js"></script>
+        <script src="caret.js"></script>
+        <script src="newlineHandler.js"></script>
+        <!-- <script src="undoRedo.js"></script> -->
+        <script src="fileOpener.js"></script>
+        <script src="addDrawing.js"></script>
+        <script src="goToView.js"></script>
+        <script src="refreshMath.js"></script>
+        <script src="catchShortcuts.js"></script>
+    </body>
+</html>

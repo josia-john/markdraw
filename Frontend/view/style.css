@@ -1,0 +1,97 @@
+[contenteditable] {
+  outline: 2px solid black;
+}
+
+img {
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+}
+
+p {
+  margin: 0.5em;
+}
+
+.h1 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.h3 {
+  font-size: 1.17em;
+  font-weight: bolder;
+}
+
+.h4 {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.h5 {
+  font-size: .83em;
+  font-weight: bolder;
+}
+
+.h6 {
+  font-size: .67em;
+  font-weight: bolder;
+}
+
+
+#editor {
+  background-color: rgb(40, 40, 40);
+  color: rgb(51, 255, 0);
+  padding: 10px;
+}
+
+
+a:link {
+  color: rgb(255, 176, 0);
+}
+
+a:visited {
+  color: rgb(255, 176, 0);
+}
+
+a:hover {
+  color: rgb(255, 204, 0);
+}
+
+
+button {
+  font-family: 'Courier New', monospace;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000000;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  font-weight: 300;
+  color:#000000;
+  text-align:center;
+  transition: all 0.2s;
+}
+button:hover {
+  color:#FFFFFF;
+  background-color:#000000;
+}
+
+
+svg {
+  border: 2px solid black;
+}
+
+.whiteboard {
+  width: min(50vh, 50vw);
+  height: min(50vh, 50vw);
+  pointer-events: none;
+}
+
